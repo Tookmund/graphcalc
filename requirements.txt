@@ -1,1 +1,2 @@
 matplotlib==1.4.3
+py_expression_eval>=0.3
