@@ -7,4 +7,4 @@ setup( name = "GraphCalc",
 	version = "0.1",
 	description = "Graphing Calculator in Python",
 	options = {"build_exe": build_exe_options},
-	executables = [Executable("run.py",base=None)])
+	executables = [Executable("GraphCalc.py",base=None)])
