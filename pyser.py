@@ -27,6 +27,7 @@ def parse(string):
 def helper(extra):
 	print("""
 Type any expression and it will simplify it to a single number
+Ctrl+C to exit
 /help : Show this menu
 /graph : graph a function (y/x) (equation) (min) (max)
 /stats : calculate statistics (list)
