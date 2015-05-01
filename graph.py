@@ -6,20 +6,6 @@ def setup():
         plt.ion()
 	
 
-"""
-class ythread(threading.Thread):
-        def __init__(self,eq,rg):
-                threading.Thread.__init__(self)
-                self.eq = eq
-                self.rg = rg
-	
-        def run(self):
-                yeq(self.eq,self.rg)
-
-class xthread(ythread):
-        def run(self):
-                xeq(self.eq,self.rg)
-"""
 numfig = 1
 		
 def graph(str):
@@ -54,4 +40,3 @@ def xeq(equation,rg):
                 xlist.append(x)
                 #print("x: %s y: %s" %(x,y))
         plt.plot(xlist,ylist)
-        #plt.show()
