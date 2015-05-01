@@ -1,19 +1,21 @@
 import graph
-import eval as pyee
+import eval as evalu 
 import stats
 import pprint
 pp = pprint.PrettyPrinter()
 vars = {}
-parser = pyee.Parser()
+parser = evalu.Parser()
 
 def set(str):
 	vars[str[1]] = float(str[2])
 
 def get(str):
-	return vars[str[1]]
+	try:
+		return vars[str[1]]
+	except:
+		pass
 	
 def parse(string):
-	#print(string.split())
 	if string[:1] == '/':
 		command(string)
 
@@ -29,10 +31,10 @@ def helper(extra):
 Type any expression and it will simplify it to a single number
 Ctrl+C to exit
 /help : Show this menu
-/set (name) (value) : set variable
-/get (name) : get variable
-/graph (y/x) (equation) (min) (max) : graph a function (y/x) (equation) (min) (max)
-/stats (list) : calculate statistics
+/set (name) (value) : Set variable
+/get (name) : Get variable
+/graph (y/x) (equation) (min) (max) : Graph a function 
+/stats (list) : Calculate statistics
 """)
 
 coms = {
@@ -49,7 +51,6 @@ def command(string):
 		rt = coms[str[0]](str)
 		if not (rt is None):
 			pp.pprint(rt)
-			#print(rt)
 	else:
 		print("%s is not a vaild command" % str[0])
 
