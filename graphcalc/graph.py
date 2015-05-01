@@ -6,7 +6,9 @@ except ImportError:
 	import dummy_threading as threading
 
 parser = Parser()
-
+def setup():
+	plt.ion()
+	
 class ythread(threading.Thread):
 	def __init__(self,eq,rg):
 		threading.Thread.__init__(self)
@@ -20,32 +22,21 @@ class xthread(ythread):
 	def run(self):
 		xeq(self.eq,self.rg)
 
-threads = []
-numthreads = 0
+numfig = 1
 
 def cleanup():
 	for x in threads:
 		x.join()
 		
 def graph(str):
-	plt.figure(numthreads)
-	global threads
-	global numthreads
+	global numfig
+	plt.figure(numfig)
 	rg = range(int(float(str[3])),int(float(str[4])))
 	if str[1] == 'x':
-		thread = xthread(str[2],rg)
+		xeq(str[2],rg)
 	elif str[1] == 'y':
-		thread = ythread(str[2],rg)
-	else:
-		thread = None
-	threads.append(thread)
-	try:
-		threads[numthreads].start()
-	except RuntimeError:
-		pass
-
-	numthreads += 1
-	#print("threading")
+		yeq(str[2],rg)
+	numfig += 1
 
 	
 def yeq(equation,rg):
@@ -57,7 +48,7 @@ def yeq(equation,rg):
 		ylist.append(y)
 		#print("x: %s y: %s" %(x,y))
 	plt.plot(xlist,ylist)
-	plt.show()
+	#plt.show()
 
 def xeq(equation,rg):
 	xlist = []
@@ -68,4 +59,4 @@ def xeq(equation,rg):
 		xlist.append(x)
 		#print("x: %s y: %s" %(x,y))
 	plt.plot(xlist,ylist)
-	plt.show()
+	#plt.show()
