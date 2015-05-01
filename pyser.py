@@ -7,7 +7,7 @@ vars = {}
 parser = pyee.Parser()
 
 def set(str):
-	vars[str[1]] = str[2]
+	vars[str[1]] = float(str[2])
 
 def get(str):
 	return vars[str[1]]
@@ -18,11 +18,11 @@ def parse(string):
 		command(string)
 
 	else:
-		try:
-			ps = parser.evaluate(string,vars)
-			pp.pprint(ps)
-		except:
-			print("Failed to parse: %s" % (string))	
+		#try:
+		ps = parser.evaluate(string,vars)
+		pp.pprint(ps)
+		#except:
+			#print("Failed to parse: %s" % (string))	
 
 def helper(extra):
 	print("""
