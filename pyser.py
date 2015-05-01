@@ -18,19 +18,21 @@ def parse(string):
 		command(string)
 
 	else:
-		#try:
-		ps = parser.evaluate(string,vars)
-		pp.pprint(ps)
-		#except:
-			#print("Failed to parse: %s" % (string))	
+		try:
+			ps = parser.evaluate(string,vars)
+			pp.pprint(ps)
+		except:
+			print("Failed to parse: %s" % (string))	
 
 def helper(extra):
 	print("""
 Type any expression and it will simplify it to a single number
 Ctrl+C to exit
 /help : Show this menu
-/graph : graph a function (y/x) (equation) (min) (max)
-/stats : calculate statistics (list)
+/set (name) (value) : set variable
+/get (name) : get variable
+/graph (y/x) (equation) (min) (max) : graph a function (y/x) (equation) (min) (max)
+/stats (list) : calculate statistics
 """)
 
 coms = {
