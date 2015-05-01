@@ -1,5 +1,4 @@
 #!/usr/bin/python3
+import cli
 
-import graphcalc.cli as calc
-
-calc.run()
+cli.run()
