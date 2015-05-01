@@ -8,31 +8,44 @@ except ImportError:
 parser = Parser()
 
 class ythread(threading.Thread):
-	def __init__(eq,rg):
+	def __init__(self,eq,rg):
+		threading.Thread.__init__(self)
 		self.eq = eq
 		self.rg = rg
 	
 	def run(self):
-		yeq(self.eq,self.rg
+		yeq(self.eq,self.rg)
 
-class xthread(threading.Thread):
-	def __init__(eq,rg):
-		self.eq = eq
-		self.rg = rg
-	
+class xthread(ythread):
 	def run(self):
 		xeq(self.eq,self.rg)
-	
+
+threads = []
+numthreads = 0
+
+def cleanup():
+	for x in threads:
+		x.join()
+		
 def graph(str):
+	plt.figure(numthreads)
+	global threads
+	global numthreads
 	rg = range(int(float(str[3])),int(float(str[4])))
 	if str[1] == 'x':
 		thread = xthread(str[2],rg)
 	elif str[1] == 'y':
-		thread = ythread(str[2],rg))
+		thread = ythread(str[2],rg)
 	else:
 		thread = None
-	thread.start()
-	print("threading")
+	threads.append(thread)
+	try:
+		threads[numthreads].start()
+	except RuntimeError:
+		pass
+
+	numthreads += 1
+	#print("threading")
 
 	
 def yeq(equation,rg):
