@@ -1,1 +1,1 @@
-python run.py
+python GraphCalc.py
