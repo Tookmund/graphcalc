@@ -7,9 +7,14 @@ help = {
 '/perm' : '(total) (pick) Calculate permuations',
 '/combo' : '(total) (pick) Calulate combinations'
 }
-def helper(str):
+def helper(st):
+	if isinstance(st,str):
+		com = '/'+st
+		print("""Wrong Arguments: 
+%s : %s""" % (com,help[com]))
+		return None
 	try:
-		com = '/'+str[1]
+		com = '/'+st[1]
 		print("%s : %s" % (com,help[com]))
 	except:
 		print("""

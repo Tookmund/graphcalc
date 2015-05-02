@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from eval import Parser
-import vars 
+import vars
+import help
 parser = Parser()
 def setup():
         plt.ion()
@@ -10,7 +11,7 @@ numfig = 1
 		
 def graph(str):
 	if len(str) < 4:
-		print("Wrong arguements: "+str(help.help(["","graph"])))
+		help.helper("graph")
 		return None
 	global numfig
 	plt.figure(numfig)

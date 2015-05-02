@@ -1,9 +1,12 @@
 import statistics
-
+import help
 from statistics import *
 
 
 def stats(lst):
+	if len(lst) < 2:
+		help.helper("stats")
+		return None
 	list = []
 	for x in lst[1:]:
 		list.append(int(x))
