@@ -3,7 +3,7 @@ vars = {}
 def set(str):
 	global vars
 	if len(str) < 3:
-		return "Wrong arguements: "+str(help.help(["","set"])
+		print("Wrong arguements: "+str(help.help(["","set"])))
 	if str[1] == 'x' or str[1] == 'ans':
 		print("Unable to set system variables")
 	else:
@@ -11,7 +11,7 @@ def set(str):
 
 def get(str):
 	if len(str) < 2:
-		return "Wrong arguments: /get (name)"
+		print("Wrong arguments: /get (name)")
 	global vars
 	try:
 		return vars[str[1]]
