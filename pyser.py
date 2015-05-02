@@ -1,12 +1,10 @@
 import graph
 import eval as evalu 
 import stats
-import pprint
 import comandper
 import help
 import vars
 
-pp = pprint.PrettyPrinter()
 parser = evalu.Parser()
 
 def parse(string):
@@ -17,7 +15,7 @@ def parse(string):
 		try:
 			ps = parser.evaluate(string,vars.vars)
 			vars.vars['a'] = float(ps)
-			pp.pprint(ps)
+			print("%f" % ps)
 		except:
 			print("Failed to parse: %s" % (string))	
 
@@ -36,7 +34,8 @@ def command(string):
 	if str[0] in coms:
 		rt = coms[str[0]](str)
 		if not (rt is None):
-			pp.pprint(rt)
+			print("%f" % rt)
+			vars.vars['a'] = float(rt)
 	else:
 		print("%s is not a vaild command" % str[0])
 

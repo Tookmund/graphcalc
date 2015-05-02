@@ -19,4 +19,5 @@ def stats(lst):
 		st["mode"] = mode(list)
 	except:
 		pass
-	return st
+	for x,y in st.items():
+		print("%s = %d" % (x,y))

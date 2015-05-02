@@ -15,6 +15,7 @@ def graph(str):
 		return None
 	global numfig
 	plt.figure(numfig)
+	plt.title(str[2])
 	rg = range(int(float(str[3])),int(float(str[4])))
 	if str[1] == 'x':
 		xeq(str[2],rg)
