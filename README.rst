@@ -11,15 +11,15 @@ How do I use it?
 There are a couple of ways to use Graph Calc:
 
 1. Run GraphCalc.py through Python 3 with matplotlib installed
-2. Run a frozen version, availiable through the Github homepage_.
+2. Run a frozen version, availiable through the homepage_.
 
-.. _homepage: https://github.com/tookmund/graphcalc
+.. _homepage: https://github.com/tookmund/graphcalc/releases
 
 
 License
 -------
 GraphCalc, a graphing calculator program
-Copyright (C) 2015 Jacob Adams <tookmund@gmail.com
+Copyright (C) 2015 Jacob Adams <tookmund@gmail.com>
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
