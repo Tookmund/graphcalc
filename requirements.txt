@@ -1,1 +1,2 @@
 matplotlib==1.4.3
+cx_Freeze==4.3.4
