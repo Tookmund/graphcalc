@@ -15,8 +15,8 @@ def parse(string):
 
 	else:
 		try:
-			ps = parser.evaluate(string,vars)
-			vars.vars['ans'] = ps
+			ps = parser.evaluate(string,vars.vars)
+			vars.vars['a'] = float(ps)
 			pp.pprint(ps)
 		except:
 			print("Failed to parse: %s" % (string))	

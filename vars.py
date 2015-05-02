@@ -5,7 +5,7 @@ def set(str):
 	if len(str) < 3:
 		help.helper("set")
 		return None
-	if str[1] == 'x' or str[1] == 'ans':
+	if str[1] == 'x' or str[1] == 'a':
 		print("Unable to set system variables")
 	else:
 		vars[str[1]] = float(str[2]) 
