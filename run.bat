@@ -1,1 +1,2 @@
-start python src/GraphCalc.py
+python src/GraphCalc.py
+
