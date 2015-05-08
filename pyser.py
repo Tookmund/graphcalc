@@ -1,15 +1,11 @@
-import graph
-import eval as evalu 
-import stats
-import comandper
-import help
-import vars
+import eval
+import command
 
-parser = evalu.Parser()
+parser = eval.Parser()
 
 def parse(string):
 	if string[:1] == '/':
-		command(string)
+		command.command(string)
 
 	else:
 		try:
@@ -19,23 +15,4 @@ def parse(string):
 		except:
 			print("Failed to parse: %s" % (string))	
 
-coms = {
-	'/help': help.helper,
-	'/set': vars.set,
-	'/get': vars.get,
-	'/graph': graph.graph,
-	'/stats': stats.stats,
-	'/combo': comandper.combo,
-	'/perm': comandper.perm
-}
-
-def command(string):
-	str = string.split(" ")
-	if str[0] in coms:
-		rt = coms[str[0]](str)
-		if not (rt is None):
-			print("%f" % rt)
-			vars.vars['a'] = float(rt)
-	else:
-		print("%s is not a vaild command" % str[0])
-
+	
