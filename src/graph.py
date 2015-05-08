@@ -14,9 +14,14 @@ def graph(str):
 		help.helper("graph")
 		return None
 	global numfig
-	plt.figure(numfig)
+	try:
+		plt.figure(int(str[5]))
+	except:
+		plt.figure(numfig)
 	plt.title(str[2])
-	rg = range(int(float(str[3])),int(float(str[4])))
+	start = int(float(str[3]))
+	end = int(float(str[4]))
+	rg = range(start,end)
 	if str[1] == 'x':
 		xeq(str[2],rg)
 	elif str[1] == 'y':
