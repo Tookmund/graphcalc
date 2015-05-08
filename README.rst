@@ -16,7 +16,7 @@ There are a couple of ways to use Graph Calc:
 Known Issues
 ------------
 - The math evaluator requires an exact relation between two terms; that is 3x will not evaluate but 3*x will
-
+- /points plots on current graph
 
 How do I add a command to GraphCalc?
 ------------------------------------

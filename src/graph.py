@@ -18,6 +18,8 @@ def graph(str):
 		plt.figure(int(str[5]))
 	except:
 		plt.figure(numfig)
+		numfig += 1
+
 	plt.title(str[2])
 	plt.grid()
 	start = int(float(str[3]))
@@ -27,7 +29,6 @@ def graph(str):
 		xeq(str[2],rg)
 	elif str[1] == 'y':
                 yeq(str[2],rg)
-	numfig += 1
 
 	
 def yeq(equation,rg):

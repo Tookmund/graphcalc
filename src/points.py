@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import help
 
 def plot(args):
-	if len(args) < 1:
+	if len(args) < 2:
 		help.helper("points")
 		return None
 	xlist = []
