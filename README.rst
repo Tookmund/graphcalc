@@ -13,6 +13,10 @@ There are a couple of ways to use Graph Calc:
 1. Run GraphCalc.py through Python 3 with matplotlib installed
 2. Run a frozen version, availiable through Github_.
 
+Known Issues
+------------
+- The math evaluator requires an exact relation between two terms; that is 3x will not evaluate but 3*x will
+
 
 How do I add a command to GraphCalc?
 ------------------------------------
