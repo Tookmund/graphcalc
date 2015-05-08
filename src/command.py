@@ -1,6 +1,6 @@
 import graph
 import stats
-import comandper
+import comboandperm
 import help
 import vars
 import sigma
@@ -11,8 +11,8 @@ coms = {
 	'/get': vars.get,
 	'/graph': graph.graph,
 	'/stats': stats.stats,
-	'/combo': comandper.combo,
-	'/perm': comandper.perm,
+	'/combo': comboandperm.combo,
+	'/perm': comboandperm.perm,
 	'/sigma': sigma.sigma
 }
 
