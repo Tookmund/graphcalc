@@ -7,7 +7,6 @@ def run():
 	print("""Welcome to GraphCalc
 To understand how it works type
 /help
-
 		""")
 	while True:
 		try:
