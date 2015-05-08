@@ -19,6 +19,7 @@ def graph(str):
 	except:
 		plt.figure(numfig)
 	plt.title(str[2])
+	plt.grid()
 	start = int(float(str[3]))
 	end = int(float(str[4]))
 	rg = range(start,end)
