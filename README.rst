@@ -17,10 +17,13 @@ There are a couple of ways to use Graph Calc:
 How do I add a command to GraphCalc?
 ------------------------------------
 1. Add a new python file under src
-2. Make sure that any exported functions take an argument list and ignore the first entry (0)
+2. Make sure that any exported functions:
+	- Take an argument list
+	- Treat the first entry as the name of the command
+	- Print any output they give nicely
 3. Edit src/command.py to import your new files
 4. Add an entry to the coms dictionary in src/command.py for your new command that calls the function in your new file
-5. Add a new entry in help.py for your command
+5. Add a new entry in the help dictionary in src/help.py for your command
 6. (Optional) Add error checking that calls help.helper with the name of your command as a string argument
 7. (Optional) Submit a pull request to the Github_. or a patch to tookmund@gmail.com
 
