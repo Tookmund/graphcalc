@@ -6,7 +6,8 @@ help = {
 '/stats' : '<list>: Calculate statistics',
 '/perm' : '<total> <pick>: Calculate permuations',
 '/combo' : '<total> <pick>: Calulate combinations',
-'/sigma' : '<equation> <variable> <start> <end>: Calcuate summation'
+'/sigma' : '<equation> <variable> <start> <end>: Calcuate summation',
+'/points' : '<point1> <point2> etc. (ex. 1,2): Plot a set of points'
 }
 def helper(st):
 	if isinstance(st,str):

@@ -4,6 +4,7 @@ import comboandperm
 import help
 import vars
 import sigma
+import points
 
 coms = {
 	'/help': help.helper,
@@ -13,7 +14,8 @@ coms = {
 	'/stats': stats.stats,
 	'/combo': comboandperm.combo,
 	'/perm': comboandperm.perm,
-	'/sigma': sigma.sigma
+	'/sigma': sigma.sigma,
+	'/points': points.plot
 }
 
 def command(string):
