@@ -11,9 +11,18 @@ How do I use it?
 There are a couple of ways to use Graph Calc:
 
 1. Run GraphCalc.py through Python 3 with matplotlib installed
-2. Run a frozen version, availiable through the homepage_.
+2. Run a frozen version, availiable through Github_.
 
-.. _homepage: https://github.com/tookmund/graphcalc/releases
+
+How do I add a command to GraphCalc?
+------------------------------------
+1. Add a new python file under src
+2. Make sure that any exported functions take an argument list and ignore the first entry (0)
+3. Edit src/command.py to import your new files
+4. Add an entry to the coms dictionary in src/command.py for your new command that calls the function in your new file
+5. Add a new entry in help.py for your command
+6. (Optional) Add error checking that calls help.helper with the name of your command as a string argument
+7. (Optional) Submit a pull request to the Github_. or a patch to tookmund@gmail.com
 
 
 License
@@ -36,5 +45,6 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 
+.. _Github: https://github.com/tookmund/graphcalc/releases
 
 
