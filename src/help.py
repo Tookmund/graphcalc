@@ -7,6 +7,7 @@ def setuphelp():
         import vars
         import sigma
         import points
+        import intersection
         help = {'/help' : '[name]: Show usage of command. Without arguments, show all'}
         help.update(graph.helper)
         help.update(stats.helper)
@@ -14,6 +15,7 @@ def setuphelp():
         help.update(vars.helper)
         help.update(sigma.helper)
         help.update(points.helper)
+        help.update(intersection.helper)
 
 def helper(st):
 	if isinstance(st,str):

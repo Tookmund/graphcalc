@@ -5,6 +5,7 @@ import help
 import vars
 import sigma
 import points
+import intersection
 
 coms = {
 	'/help': help.helper,
@@ -15,7 +16,8 @@ coms = {
 	'/combo': comboandperm.combo,
 	'/perm': comboandperm.perm,
 	'/sigma': sigma.sigma,
-	'/points': points.plot
+	'/points': points.plot,
+        '/intersect':intersection.intersect
 }
 
 def command(string):
