@@ -1,5 +1,6 @@
 import eval
 import command
+import vars
 
 parser = eval.Parser()
 
