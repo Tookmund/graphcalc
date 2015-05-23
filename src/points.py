@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import help
-
+helper = {'/points' : '<point1> <point2> etc. (ex. 1,2): Plot a set of points'}
 def plot(args):
 	if len(args) < 2:
 		help.helper("points")

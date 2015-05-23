@@ -1,5 +1,7 @@
 import help
 vars = {}
+helper = {'/set' : '<name> <value>: Set variable',
+          '/get' : '<name>: Get variable'}
 def set(str):
 	global vars
 	if len(str) < 3:

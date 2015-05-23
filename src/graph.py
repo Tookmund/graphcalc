@@ -5,7 +5,8 @@ import help
 parser = Parser()
 def setup():
         plt.ion()
-	
+
+helper = {'/graph' : '<y/x> <equation> <min> <max> [figure]: Graph a function. If figure given, graph in the given figure'}
 
 numfig = 1
 		
@@ -31,22 +32,20 @@ def graph(str):
                 yeq(str[2],rg)
 
 	
+def genpoints(equation,rg,xy):
+        inp = []
+        out = []
+        for x in rg:
+                vars.vars[xy] = x
+                inp.append(x)
+                y = parser.evaluate(equation, vars.vars)
+                out.append(y)
+        return (inp,out)
+
 def yeq(equation,rg):
-	xlist = []
-	ylist = []
-	for x in rg:
-		vars.vars['x'] = x
-		xlist.append(x)
-		y = parser.evaluate(equation, vars.vars)
-		ylist.append(y)
-		plt.plot(xlist,ylist)
+	xlist,ylist = genpoints(equation,rg,'x')
+	plt.plot(xlist,ylist)
 
 def xeq(equation,rg):
-	xlist = []
-	ylist = []
-	for y in rg:
-		vars.vars['y'] = y
-		ylist.append(y)
-		x = parser.evaluate(equation, vars.vars)
-		xlist.append(x)
+	ylist,xlist = genpoints(equation,rg,'y')
 	plt.plot(xlist,ylist)

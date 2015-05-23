@@ -1,6 +1,7 @@
 import help
 import eval
 parser = eval.Parser()
+helper = {'/sigma' : '<equation> <variable> <start> <end>: Calcuate summation'}
 def sigma(args):
 	# equation variable start end
 	if len(args) < 4:

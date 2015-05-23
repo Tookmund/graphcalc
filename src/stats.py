@@ -2,7 +2,7 @@ import statistics
 import help
 from statistics import *
 
-
+helper = {'/stats' : '<list>: Calculate statistics'}
 def stats(lst):
 	if len(lst) < 2:
 		help.helper("stats")

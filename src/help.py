@@ -1,14 +1,20 @@
-help = {
-'/help' : '[name]: Show usage of command. Without arguments, show all',
-'/set' : '<name> <value>: Set variable',
-'/get' : '<name>: Get variable',
-'/graph' : '<y/x> <equation> <min> <max> [figure]: Graph a function. If figure given, graph in the given figure', 
-'/stats' : '<list>: Calculate statistics',
-'/perm' : '<total> <pick>: Calculate permuations',
-'/combo' : '<total> <pick>: Calulate combinations',
-'/sigma' : '<equation> <variable> <start> <end>: Calcuate summation',
-'/points' : '<point1> <point2> etc. (ex. 1,2): Plot a set of points'
-}
+help = {}
+def setuphelp():
+        global help
+        import graph 
+        import stats 
+        import comboandperm 
+        import vars
+        import sigma
+        import points
+        help = {'/help' : '[name]: Show usage of command. Without arguments, show all'}
+        help.update(graph.helper)
+        help.update(stats.helper)
+        help.update(comboandperm.helper)
+        help.update(vars.helper)
+        help.update(sigma.helper)
+        help.update(points.helper)
+
 def helper(st):
 	if isinstance(st,str):
 		com = '/'+st
