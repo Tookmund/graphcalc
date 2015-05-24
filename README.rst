@@ -17,19 +17,19 @@ Known Issues
 ------------
 - The math evaluator requires an exact relation between two terms; that is 3x will not evaluate but 3*x will
 - /points plots on current graph
+- /intersect requires whole number intersection
 
 How do I add a command to GraphCalc?
 ------------------------------------
 1. Add a new python file under src
-2. Make sure that any exported functions:
+#. Add coms and helper dictionaries to your file. See the other modules for an example
+#. Make sure that any exported functions:
 	- Take an argument list
 	- Treat the first entry in the argument list as the name of the command
 	- Print any output they give nicely
-3. Edit src/command.py to import your new files
-4. Add an entry to the coms dictionary in src/command.py for your new command that calls the function in your new file
-5. Add a new entry in the help dictionary in src/help.py for your command
-6. (Optional) Add error checking that calls help.helper with the name of your command as a string argument
-7. Submit a pull request to the Github_. or a patch to tookmund@gmail.com
+#. Edit src/command.py and src/help.py to import your new file
+#. (Optional) Add error checking that calls help.helper with the name of your command as a string argument. See other modules for an example
+#. Submit a pull request to the Github_. or a patch to tookmund@gmail.com
 
 License
 -------
