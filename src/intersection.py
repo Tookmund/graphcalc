@@ -8,7 +8,7 @@ def intersect(args):
         return None
     eq1 = args[1]
     eq2 = args[2]
-    rg = range(min,max)
+    rg = range(int(float(args[3])),int(float(args[4])))
     
     pts1x,pts1y = genpoints(eq1,rg,'x')
     pts2x,pts2y = genpoints(eq2,rg,'x')
@@ -16,5 +16,5 @@ def intersect(args):
     for x in rg:
         if pts1x[x] == pts2x[x] and pts1y[x] == pts2y[x]:
             out.append((pts1x[x],pts1y[x]))
-    for x in rg:
-        print("(%s)\n" % (out[x],))
+    for x in out:
+        print("%s\n" % (x,))
