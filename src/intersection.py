@@ -2,6 +2,7 @@ from graph import genpoints
 import help
 
 helper = {'/intersect':'<equation1> <equation2> <min> <max>: Calculate intersection between two y= equations'}
+coms = {'/intersect':intersect}
 def intersect(args):
     if len(args) < 4:
         help.helper("intersect")

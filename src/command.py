@@ -1,24 +1,30 @@
-import graph
-import stats
-import comboandperm
-import help
-import vars
-import sigma
-import points
-import intersection
+coms = {}
+def setup():
+        global coms
 
-coms = {
-	'/help': help.helper,
-	'/set': vars.set,
-	'/get': vars.get,
-	'/graph': graph.graph,
-	'/stats': stats.stats,
-	'/combo': comboandperm.combo,
-	'/perm': comboandperm.perm,
-	'/sigma': sigma.sigma,
-	'/points': points.plot,
-        '/intersect':intersection.intersect
-}
+        import graph
+        coms.update(graph.coms)
+
+        import stats
+        coms.update(stats.coms)
+
+        import comboandperm
+        coms.update(comboandperm.coms)
+
+        import help
+        coms.update(help.coms)
+
+        import vars
+        coms.update(vars.coms)
+
+        import sigma
+        coms.update(sigma.coms)
+
+        import points
+        coms.update(points.coms)
+
+        import intersection
+        coms.update(intersections.coms)
 
 def command(string):
 	str = string.split(" ")

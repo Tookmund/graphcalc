@@ -1,22 +1,29 @@
-help = {}
+help = {'/help' : '[name]: Show usage of command. Without arguments, show all'}
+coms = {'/help': helper}
 def setup():
         global help
-        import graph 
-        import stats 
-        import comboandperm 
-        import vars
-        import sigma
-        import points
-        import intersection
-        help = {'/help' : '[name]: Show usage of command. Without arguments, show all'}
+        
+        import graph
         help.update(graph.helper)
-        help.update(stats.helper)
-        help.update(comboandperm.helper)
-        help.update(vars.helper)
-        help.update(sigma.helper)
-        help.update(points.helper)
-        help.update(intersection.helper)
 
+        import stats 
+        help.update(stats.helper)
+
+        import comboandperm 
+        help.update(comboandperm.helper)
+
+        import vars
+        help.update(vars.helper)
+
+        import sigma
+        help.update(sigma.helper)
+
+        import points
+        help.update(points.helper)
+
+        import intersection
+        help.update(intersection.helper)
+       
 def helper(st):
 	if isinstance(st,str):
 		com = '/'+st

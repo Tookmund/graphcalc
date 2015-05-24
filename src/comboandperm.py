@@ -2,6 +2,8 @@ from math import factorial as fact
 import help
 helper = {'/perm' : '<total> <pick>: Calculate permuations',
           '/combo' : '<total> <pick>: Calulate combinations'}
+coms = {'/combo': combo,
+	'/perm': perm}
 def perm(str):
 	if len(str) < 2:
 		help.helper("perm")

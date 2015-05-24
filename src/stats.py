@@ -3,6 +3,8 @@ import help
 from statistics import *
 
 helper = {'/stats' : '<list>: Calculate statistics'}
+coms = ('/stats': stats}
+
 def stats(lst):
 	if len(lst) < 2:
 		help.helper("stats")
