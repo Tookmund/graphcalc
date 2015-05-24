@@ -1,5 +1,5 @@
 help = {}
-def setuphelp():
+def setup():
         global help
         import graph 
         import stats 

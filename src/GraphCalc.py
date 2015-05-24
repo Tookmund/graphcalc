@@ -2,5 +2,5 @@
 import cli
 import help
 
-help.setuphelp()
+help.setup()
 cli.run()
