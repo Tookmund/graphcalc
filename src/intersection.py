@@ -5,7 +5,8 @@ import scipy.optimize as optimize
 import numpy as np
 
 helper = {'/intersect':'<equation1> <equation2> <min> <max>: Calculate intersection between two y= equations'}
-coms = {'/intersect':intersect}
+p1=None
+p2=None
 
 def pdiff(x):
     return p1(x)-p2(x)
@@ -23,7 +24,8 @@ def intersect(args):
     x1=np.array(pts1x)
     y1=np.array(pts1y)
     x2=np.array(pts2x)
-    y2=np.array(pts2y)    
+    y2=np.array(pts2y)
+    global p1,p2
     p1=interpolate.PiecewisePolynomial(x1,y1[:,np.newaxis])
     p2=interpolate.PiecewisePolynomial(x2,y2[:,np.newaxis])
     xs=np.r_[x1,x2]
@@ -39,4 +41,6 @@ def intersect(args):
             roots.add(root[0])
     roots=list(roots)
     for i in roots:
-        print("(%d,%d)" % roots[i],p1(roots))
+        print("(%d,%d)" % (i,p1(i)))
+
+coms = {'/intersect':intersect}
