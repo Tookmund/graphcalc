@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import help
 helper = {'/points' : '<point1> <point2> etc. (ex. 1,2): Plot a set of points'}
-coms = {'/points': plot}
+
 def plot(args):
 	if len(args) < 2:
 		help.helper("points")
@@ -14,3 +14,4 @@ def plot(args):
 		ylist.append(pt[1])
 	plt.plot(xlist,ylist,'o')
 
+coms = {'/points': plot}

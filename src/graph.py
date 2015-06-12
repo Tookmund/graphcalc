@@ -7,7 +7,7 @@ def setup():
         plt.ion()
 
 helper = {'/graph' : '<y/x> <equation> <min> <max> [figure]: Graph a function. If figure given, graph in the given figure'}
-coms = {'/graph': graph}
+
 numfig = 1
 		
 def graph(str):
@@ -31,7 +31,7 @@ def graph(str):
 	elif str[1] == 'y':
                 yeq(str[2],rg)
 
-	
+coms = {'/graph': graph}
 def genpoints(equation,rg,xy):
         inp = []
         out = []

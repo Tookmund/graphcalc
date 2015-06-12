@@ -24,7 +24,7 @@ def setup():
         coms.update(points.coms)
 
         import intersection
-        coms.update(intersections.coms)
+        coms.update(intersection.coms)
 
 def command(string):
 	str = string.split(" ")

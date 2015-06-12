@@ -1,5 +1,5 @@
 help = {'/help' : '[name]: Show usage of command. Without arguments, show all'}
-coms = {'/help': helper}
+
 def setup():
         global help
         
@@ -40,3 +40,4 @@ Ctrl+C to exit
 """)
 		for x,y in help.items():
 			print("%s %s\n" % (x,y))
+coms = {'/help': helper}

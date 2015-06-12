@@ -2,7 +2,7 @@ import help
 import eval
 parser = eval.Parser()
 helper = {'/sigma' : '<equation> <variable> <start> <end>: Calcuate summation'}
-coms = {'/sigma': sigma}
+
 def sigma(args):
 	# equation variable start end
 	if len(args) < 4:
@@ -18,3 +18,5 @@ def sigma(args):
 	for x in range(start,end+1):
 		result += parser.evaluate(eq,{var:x})
 	print("%d" % result)
+
+coms = {'/sigma': sigma}
