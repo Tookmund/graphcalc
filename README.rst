@@ -17,7 +17,6 @@ Known Issues
 ------------
 - The math evaluator requires an exact relation between two terms; that is 3x will not evaluate but 3*x will
 - /points plots on current graph
-- /intersect requires whole number intersection
 
 How do I add a command to GraphCalc?
 ------------------------------------
