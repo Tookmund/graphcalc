@@ -46,14 +46,14 @@ def scipyintersect(args):
         print("(%d,%d)" % (i,p1(i)))
 """
 # http://stackoverflow.com/a/3252222
-# line segment a given by endpoints a1, a2
-# line segment b given by endpoints b1, b2
-# return 
 def perp( a ) :
 	b = empty_like(a)
 	b[0] = -a[1]
 	b[1] = a[0]
 	return b
+
+# line segment a given by endpoints a1, a2
+# line segment b given by endpoints b1, b2
 
 def seg_intersect(a1,a2, b1,b2) :
     da = a2-a1
