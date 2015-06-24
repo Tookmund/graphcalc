@@ -2,6 +2,8 @@ import statistics
 import help
 from statistics import *
 
+helper = {'/stats' : '<list>: Calculate statistics'}
+
 
 def stats(lst):
 	if len(lst) < 2:
@@ -21,3 +23,5 @@ def stats(lst):
 		pass
 	for x,y in st.items():
 		print("%s = %d" % (x,y))
+
+coms = {'/stats' : stats}

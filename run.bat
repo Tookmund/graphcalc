@@ -1,1 +1,2 @@
-python GraphCalc.py
+python src/GraphCalc.py
+
