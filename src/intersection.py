@@ -10,16 +10,13 @@ def intersect(args):
 		return None
 	eq1 = args[1]
 	eq2 = args[2]
-	rg = linspace(int(float(args[3])),int(float(args[4])))
-	pts1 = genpoints(eq1,rg,'x')
-	pts2 = genpoints(eq2,rg,'x')
-	print(pts1)
-	print(pts2)
-	out = {}
-	for x,y in pts1.items():
-		if pts2[x] == y:
-			out.update({x:y})
+	rg = range(int(float(args[3])),int(float(args[4])))
+	pts1x,pts1y = genpoints(eq1,rg,'x')
+	pts2x,pts2y = genpoints(eq2,rg,'x')
+	out = [] 
+	for x in rg:
+		if pts1x[x] == pts2x[x] and pts1y[x] == pts2y[x]:
+			out.append((pts1x[x],pts1y[x]))
 	for x in out:
-        	print("(%f,%f)\n" % (x,out[x]))	
-
+		print("(%s)\n" % (x,))
 coms = {'/intersect':intersect}

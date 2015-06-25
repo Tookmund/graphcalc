@@ -33,17 +33,19 @@ def graph(str):
 
 coms = {'/graph': graph}
 def genpoints(equation,rg,xy):
-        out = {}
-        for x in rg:
-                vars.vars[xy] = x
-                y = parser.evaluate(equation, vars.vars)
-                out.update({x:y})
-        return out
+	out = []
+	inp = []
+	for x in rg:
+		vars.vars[xy] = x
+		y = parser.evaluate(equation, vars.vars)
+		inp.append(x)
+		out.append(y)
+	return (inp,out)
 
 def yeq(equation,rg):
-	xlist,ylist = genpoints(equation,rg,'x')
-	plt.plot(xlist,ylist)
+	x,y = genpoints(equation,rg,'x')
+	plt.plot(x,y)
 
 def xeq(equation,rg):
-	ylist,xlist = genpoints(equation,rg,'y')
-	plt.plot(xlist,ylist)
+	x,y = genpoints(equation,rg,'y')
+	plt.plot(x,y)
